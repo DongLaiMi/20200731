@@ -28,4 +28,9 @@ public class UserController {
     public Object test(String name){
         return userService.sayHi("test");
     }
+
+    @RequestMapping("/release1")
+    public Object release1(String name){
+        return userService.sayHi("release1");
+    }
 }
