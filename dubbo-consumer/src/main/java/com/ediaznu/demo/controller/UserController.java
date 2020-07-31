@@ -29,8 +29,10 @@ public class UserController {
         return userService.sayHi("test");
     }
 
-    @RequestMapping("/release1")
-    public Object release1(String name){
-        return userService.sayHi("release1");
+    //测试一哈1。0
+    @RequestMapping("/test1")
+    public Object test1(String name){
+        return userService.sayHi("test1");
     }
+
 }
