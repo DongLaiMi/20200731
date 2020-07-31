@@ -14,7 +14,7 @@ public class UserController {
     @Reference(url="dubbo://127.0.0.1:20880")
     private UserService userService;
 
-    @GetMapping("/hello")
+    @RequestMapping("/hello")
     public Object sayHi(String name){
         return userService.sayHi("cpx");
     }
@@ -22,5 +22,10 @@ public class UserController {
     @RequestMapping("/findUsers")
     public List<User> findUsers(){
         return userService.findUsers();
+    }
+
+    @RequestMapping("/test")
+    public Object test(String name){
+        return userService.sayHi("test");
     }
 }
